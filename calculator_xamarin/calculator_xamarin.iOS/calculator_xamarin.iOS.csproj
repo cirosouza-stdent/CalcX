@@ -134,6 +134,8 @@
     <ProjectReference Include="..\calculator_xamarin\calculator_xamarin.csproj">
       <Project>{A63CFC9B-9B75-4970-8E3B-A4183DB92976}</Project>
       <Name>calculator_xamarin</Name>
+      <IsAppExtension>false</IsAppExtension>
+      <IsWatchApp>false</IsWatchApp>
     </ProjectReference>
   </ItemGroup>
 </Project>

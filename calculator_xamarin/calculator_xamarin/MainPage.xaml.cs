@@ -4,9 +4,12 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Xamarin.Essentials;
-using Xamarin.Forms;
 using AngouriMath;
+using Microsoft.Maui.Graphics;
+using Microsoft.Maui.Controls.Compatibility;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui;
+using Microsoft.Maui.ApplicationModel;
 
 namespace calculator_xamarin
 {
@@ -41,11 +44,11 @@ namespace calculator_xamarin
             all_btns.Add(dot_btn);
             all_btns.Add(zero_btn);
             all_btns.Add(equal_btn);
-            Xamarin.Essentials.AppTheme theme = AppInfo.RequestedTheme;
+            Microsoft.Maui.ApplicationModel.AppTheme theme = AppInfo.RequestedTheme;
             switch (theme)
             {
-                case Xamarin.Essentials.AppTheme.Light:
-                    Main_number_add.TextColor = Color.Black;
+                case Microsoft.Maui.ApplicationModel.AppTheme.Light:
+                    Main_number_add.TextColor = Colors.Black;
                     break;
             }
         }
@@ -93,7 +96,7 @@ namespace calculator_xamarin
         private async void back_clicked(object sender, EventArgs args)
         {            
             Button btn = (Button)sender;
-            btn.BackgroundColor = Color.FromHex("#C7C7C7");
+            btn.BackgroundColor = Color.FromArgb("#C7C7C7");
             await Task.Delay(50);
             if (no_char > 0)
             {
@@ -116,7 +119,7 @@ namespace calculator_xamarin
                 }
                 catch { }
             }
-            btn.BackgroundColor = Color.Transparent;
+            btn.BackgroundColor = Colors.Transparent;
 
         }
 
